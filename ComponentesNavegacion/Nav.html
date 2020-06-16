@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" ref="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <ul class="nav bg-dark">
+            <li class="nav-item">
+                <a href="" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">Noticias</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">Contacto</a>
+            </li>
+        </ul>
+
+        <nav class="nav mt-5 bg-warning">
+            <a href="" class="nav-link">Inicio</a>
+            <a href="" class="nav-link">Noticias</a>
+            <a href="" class="nav-link">Nosotros</a>
+            <a href="" class="nav-link">Contacto</a>
+        </nav>
+
+        <nav class="nav mt-5 nav-pills bg-light">
+            <a href="" class="nav-link active">Inicio</a>
+            <a href="" class="nav-link">Noticias</a>
+            <a href="" class="nav-link">Nosotros</a>
+            <a href="" class="nav-link">Contacto</a>
+        </nav>
+
+        <nav class="nav mt-5 nav-tabs bg-warning">
+            <a href="#inicio" class="nav-link active" data-toggle="tab">Inicio</a>
+            <a href="#noticias" class="nav-link" data-toggle="tab">Noticias</a>
+            <a href="#nosotros" class="nav-link" data-toggle="tab">Nosotros</a>
+            <a href="#contacto" class="nav-link" data-toggle="tab">Contacto</a>
+        </nav>
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="inicio">Contenido del panel inicio</div>
+            <div class="tab-pane fade" id="noticias">Contenido del panel Noticias</div>
+            <div class="tab-pane fade" id="nosotros">Contenido del panel Nosotros</div>
+            <div class="tab-pane fade" id="contacto">Contenido del panel Contacto</div>
+        </div>
+    </div>
+
+    <!--Funciones associadas
+            .tab() Activa una pesataña. Debe tener el atrib. data-target o el href correcto
+            .tab('show') Dada una pestaña muestra el panel asociado
+            .tab('dispose') Destruye el componente. Deja de funcionar como tal
+    -->
+
+    <!--Eventos associados
+            show.bs.dropdown
+            shown.bs.dropdown
+            hide.bs.dropdown
+            hidden.bs.dropdown
+    -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function(){
+            $("nav").on('hidden.bs.tab',function(){
+                alert('pestaña oculta')
+            })
+        })
+    </script>
+</body>
+
+</html>
